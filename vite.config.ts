@@ -4,7 +4,7 @@ import path from "path";
 
 export default defineConfig({
   plugins: [react()],
-  base: '/at-work/',
+  base: "/At-Work/",
   css: {
     preprocessorOptions: {
       scss: {
