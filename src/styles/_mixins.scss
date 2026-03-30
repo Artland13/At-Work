@@ -1,0 +1,48 @@
+@mixin text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+@mixin title {
+  font-size: var(--var-font-title-size);
+  font-weight: 600;
+  @include text-truncate;
+}
+
+@mixin headline {
+  font-size: var(--var-font-headline-size);
+  font-weight: 600;
+  @include text-truncate;
+}
+
+@mixin text1-semibold {
+  font-size: var(--var-font-text1-size);
+  font-weight: 600;
+  @include text-truncate;
+}
+
+@mixin text1-medium {
+  font-size: var(--var-font-text1-size);
+  font-weight: 500;
+  @include text-truncate;
+}
+
+@mixin text2-semibold {
+  font-size: var(--var-font-text2-size);
+  font-weight: 600;
+  @include text-truncate;
+}
+
+@mixin text2-medium {
+  font-size: var(--var-font-text2-size);
+  font-weight: 500;
+  @include text-truncate;
+}
+
+@mixin caption {
+  font-size: var(--var-font-caption-size);
+  font-weight: var(--var-caption-weight);
+  @include text-truncate;
+}

@@ -1,0 +1,65 @@
+@use "@styles/_mixins" as *;
+
+.root {
+  position: relative;
+
+  .button {
+    width: 24px;
+    aspect-ratio: 1/1;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: var(--var-color-01);
+
+    @media (max-width: 376px) {
+      width: 15px;
+    }
+
+    & > svg {
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+    }
+
+    &:hover {
+      color: var(--var-color-accent);
+    }
+
+    &:active {
+      transform: scale(0.95);
+      color: var(--var-color-02);
+    }
+  }
+
+  .menu {
+    position: absolute;
+    background-color: var(--var-color-06);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 12px;
+    width: 200px;
+    justify-content: start;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+
+    @media (max-width: 376px) {
+      width: 160px;
+      left: -130px;
+    }
+
+    .menuItem {
+      padding: 8px 12px;
+      width: 100%;
+      color: var(--var-color-01);
+      @include text2-medium;
+      text-align: start;
+
+      &:hover {
+        color: var(--var-color-accent);
+      }
+    }
+  }
+}

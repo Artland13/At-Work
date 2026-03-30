@@ -1,0 +1,27 @@
+:root {
+  --var-color-06: #fdfdfd;
+  --var-color-05: #f4f4f4;
+  --var-color-04: #dadada;
+  --var-color-03: #9c9c9c;
+  --var-color-02: #595959;
+  --var-color-01: #161616;
+  --var-color-accent: #22a0bc;
+
+  --var-font-title-size: 24px;
+  --var-font-headline-size: 20px;
+  --var-font-text1-size: 18px;
+  --var-font-text2-size: 16px;
+  --var-font-caption-size: 14px;
+  --var-caption-weight: 400;
+}
+
+@media (max-width: 376px) {
+  :root {
+    --var-font-title-size: 24px;
+    --var-font-headline-size: 18px;
+    --var-font-text1-size: 16px;
+    --var-font-text2-size: 14px;
+    --var-font-caption-size: 10px;
+    --var-caption-weight: 600;
+  }
+}

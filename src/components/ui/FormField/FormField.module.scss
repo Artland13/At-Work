@@ -1,0 +1,43 @@
+@use "@styles/_mixins" as *;
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 77px;
+
+  .title {
+    @include text1-semibold;
+    color: var(--var-color-01);
+  }
+
+  .inputContainer {
+    width: 100%;
+    position: relative;
+
+    .input {
+      @include text2-medium;
+      color: var(--var-color-01);
+      width: 100%;
+      padding: 10px 8px 10px 16px;
+      border: 1px solid var(--var-color-04);
+      border-radius: 50px;
+
+      &:focus {
+        outline: 0;
+      }
+    }
+
+    .crossButton {
+      width: 24px;
+      aspect-ratio: 1/1;
+      position: absolute;
+      right: 8px;
+      top: 8px;
+    }
+  }
+
+  .errorMessage {
+    color: red;
+  }
+}

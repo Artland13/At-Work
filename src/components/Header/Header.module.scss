@@ -1,0 +1,62 @@
+@use "@styles/mixins" as *;
+
+.root {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--var-color-06);
+  position: fixed;
+  z-index: 10;
+  padding: 0px 16px;
+
+  @media (max-width: 376px) {
+    height: 50px;
+  }
+
+  .container {
+    max-width: 1140px;
+    width: 100%;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .userActions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .actionIcons {
+        gap: 4px;
+        display: flex;
+
+        @media (max-width: 376px) {
+          display: none;
+        }
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .foto {
+          width: 20px;
+          aspect-ratio: 1/1;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .text {
+          @include text2-medium;
+
+          @media (max-width: 376px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
