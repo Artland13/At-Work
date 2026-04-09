@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./App.scss";
 import { Layout } from "./components/Layout/Layout";
 import { Suspense, lazy } from "react";
-const Home = lazy(() => import("./pages/Home/Home"));
+import Home from "./pages/Home/Home";
 const EditUser = lazy(() => import("./pages/EditUser/EditUser"));
 
 const queryClient = new QueryClient({
@@ -20,7 +20,7 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
+      <BrowserRouter basename="/At-Work">
         <Layout>
           <Suspense>
             <Routes>
